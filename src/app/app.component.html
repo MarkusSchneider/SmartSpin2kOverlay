@@ -1,0 +1,10 @@
+<div class="title-bar">
+    <div class="spacer">Drag here ...</div>
+    <p class="close-button" (click)="__onCloseClick()">&#10006;</p>
+</div>
+<div *ngIf="runtimeValues$ | async as values">
+    <app-value label="Incline" [currentValue]="values.currentIncline" [targetValue]="values.newIncline"></app-value>
+    <app-value label="Setpoint" [currentValue]="values.currentSetpoint" [targetValue]="values.newSetpoint"></app-value>
+    <app-value label="Power" [currentValue]="values.currentWatts" [targetValue]="values.newWatts"></app-value>
+    <app-value label="Cadence" [currentValue]="values.currentCadence" [targetValue]="values.newCadence"></app-value>
+</div>

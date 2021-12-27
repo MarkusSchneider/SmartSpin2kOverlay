@@ -1,0 +1,172 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "app/**/*", // ignore nodeJs files
+    "dist/**/*",
+    "release/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.serve.json",
+          "./src/tsconfig.app.json",
+          "./src/tsconfig.spec.json",
+          "./e2e/tsconfig.e2e.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/ng-cli-compat--formatting-add-on",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "prefer-arrow/prefer-arrow-functions": 0,
+        "@angular-eslint/directive-selector": 0,
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "member-delimiter-style": "off",
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "overrides": {
+              "interface": {
+                "multiline": {
+                  "delimiter": "semi",
+                  "requireLast": true
+                },
+                "singleline": {
+                  "delimiter": "semi",
+                  "requireLast": true
+                }
+              }
+            }
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "memberLike",
+            "modifiers": [
+              "public"
+            ],
+            "filter": {
+              "regex": "^(__)",
+              "match": false
+            },
+            "format": [
+              "camelCase",
+              "snake_case"
+            ]
+          },
+          {
+            "selector": "memberLike",
+            "modifiers": [
+              "public"
+            ],
+            "prefix": [
+              "__"
+            ],
+            "format": [
+              "camelCase"
+            ]
+          },
+          {
+            "selector": "memberLike",
+            "modifiers": [
+              "public",
+              "static",
+              "readonly"
+            ],
+            "filter": {
+              "regex": "^(__|type)",
+              "match": false
+            },
+            "format": [
+              "UPPER_CASE"
+            ]
+          },
+          {
+            "selector": "memberLike",
+            "modifiers": [
+              "private"
+            ],
+            "format": [
+              "camelCase"
+            ],
+            "leadingUnderscore": "require"
+          }
+        ],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/prefer-readonly": "error",
+        "brace-style": [
+          "error",
+          "1tbs"
+        ],
+        "id-blacklist": "off",
+        "id-match": "off",
+        "max-len": [
+          "error",
+          {
+            "code": 180
+          }
+        ],
+        "no-multiple-empty-lines": "error",
+        "no-underscore-dangle": "off",
+        "semi": [
+          "error",
+          "always",
+          {
+            "omitLastInOneLineBlock": false
+          }
+        ],
+        "space-before-function-paren": "off",
+        "@typescript-eslint/member-ordering": "off",
+        "no-inferrable-types": "off",
+        "@typescript-eslint/no-inferrable-types": "off",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "object-shorthand": "off",
+        "@typescript-eslint/object-shorthand": "off",
+        "no-undef": "off",
+        "no-unused-vars": "off"
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

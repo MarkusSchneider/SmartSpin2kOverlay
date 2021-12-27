@@ -1,0 +1,24 @@
+:host{
+    border-radius: 8px;
+    padding: 8px;
+    background-color: rgba(17, 146, 204, 0.5);
+    &:hover{
+    background-color: rgba(17, 146, 204, 1);
+    }
+}
+
+.title-bar {
+    -webkit-app-region: drag;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: rgba(211, 211, 211, 0.1);
+    & .spacer {
+        flex: auto;
+    }
+    & .close-button {
+        -webkit-app-region: no-drag;
+        cursor: pointer;
+        flex: 0 1 auto;
+    }
+}

@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.value-label {
+    flex: 1;
+    padding-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    & > span {
+        flex: auto;
+    }
+}

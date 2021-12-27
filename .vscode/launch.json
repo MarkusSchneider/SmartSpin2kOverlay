@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Renderer",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9876,
+            "url": "http://localhost:4200",
+            "sourceMaps": true,
+            "timeout": 10000,
+            "trace": false,
+            "sourceMapPathOverrides": {
+                "webpack:///./*": "${workspaceFolder}/*"
+            },
+            "preLaunchTask": "Build.Renderer"
+        },
+        {
+            "name": "Main",
+            "type": "node",
+            "request": "launch",
+            "protocol": "inspector",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "sourceMaps": true,
+            "trace": false,
+            "runtimeArgs": [
+                "--serve",
+                ".",
+                "--remote-debugging-port=9876"
+            ],
+            "windows": {
+                "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+            },
+            "preLaunchTask": "Build.Main"
+        },
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach Karma Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Application Debug",
+            "configurations": [
+                "Renderer",
+                "Main"
+            ]
+        }
+    ]
+}
