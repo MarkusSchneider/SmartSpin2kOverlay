@@ -9,7 +9,7 @@ var UdpListner = /** @class */ (function () {
     UdpListner.prototype.init = function (port) {
         var _this = this;
         this._socket = (0, dgram_1.createSocket)('udp4');
-        this._socket.bind(port, function () { var _a, _b; console.log("now listening on port: " + port + " address: " + ((_b = (_a = _this._socket) === null || _a === void 0 ? void 0 : _a.address()) === null || _b === void 0 ? void 0 : _b.address)); });
+        this._socket.bind(port, function () { var _a, _b; console.log("now listening on port: ".concat(port, " address: ").concat((_b = (_a = _this._socket) === null || _a === void 0 ? void 0 : _a.address()) === null || _b === void 0 ? void 0 : _b.address)); });
     };
     UdpListner.prototype.onMessage = function (msgCallback) {
         var _a;

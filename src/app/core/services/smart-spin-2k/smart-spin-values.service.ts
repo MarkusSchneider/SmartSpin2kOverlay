@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IpcRendererEvent } from 'electron';
 import { Observable, Subject } from 'rxjs';
-import { MessageReceived } from '../../../shared';
+import { MessageReceived } from '../../../../../app/shared';
 import { ElectronService } from '../electron/electron.service';
 
 export interface RuntimeValues {

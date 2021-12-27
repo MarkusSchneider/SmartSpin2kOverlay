@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ElectronService, IpcRenderer, SmartSpinValuesService } from './core/services';
 import { Mock } from 'ts-mocks'
-import { CloseWindow } from './shared';
 import { of } from 'rxjs';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { CloseWindow } from '../../app/shared';
 
 describe('AppComponent', () => {
   let electronService: ElectronService;

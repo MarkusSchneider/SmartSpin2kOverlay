@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CloseWindow } from '../../app/shared';
 import { Observable } from 'rxjs';
 import { ElectronService, RuntimeValues, SmartSpinValuesService } from './core/services';
-import { CloseWindow } from './shared';
 
 @Component({
   selector: 'app-root',

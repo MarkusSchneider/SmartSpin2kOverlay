@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { MessageReceived } from 'app/shared';
 import { IpcRendererEvent } from 'electron';
-import { MessageReceived } from 'src/app/shared';
 import { Mock } from 'ts-mocks';
 import { RuntimeValues } from '.';
 import { ElectronService, IpcRenderer } from '../electron/electron.service';

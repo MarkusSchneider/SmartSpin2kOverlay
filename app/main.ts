@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
 
-import { CloseWindow, MessageReceived } from '../src/app/shared';
+import { CloseWindow, MessageReceived } from './shared';
 import { UdpListner } from './udp-listner';
 
 let win: BrowserWindow | null = null;
@@ -20,9 +20,8 @@ function createWindow(): BrowserWindow {
     frame: false,
     height: 400,
     // resizable: false,
-    titleBarStyle: 'customButtonsOnHover',
     transparent: true,
-    width: 600,
+    width: 200,
 
     webPreferences: {
       nodeIntegration: true,
